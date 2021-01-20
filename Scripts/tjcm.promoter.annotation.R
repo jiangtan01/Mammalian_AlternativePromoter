@@ -1,4 +1,4 @@
-##module load snakePipes/1.2.3 && cd /data/bio/tan/Mammalian2019Promoter
+##module load snakePipes/1.2.3 && cd /data/jtan/Mammalian2020Promoter
 ##RNA-seq -i ../Fastq/CM2019RNAseqHuman/ -o CM2019RNAseqHuman --aligner HISAT2 --trimmer trimgalore --trimmerOptions '-q 20 --fastqc --trim-n --clip_R1 6' --libraryType 2 -j 100 --DAG --bwBinSize 10 hg38
 # for i in */*.SJ.out.tab; do j=`echo $i |cut -d "/" -f2`; awk '($5 > 0 && $7 > 2)' $i > $j; done ##remove low quality junction counts
 # make standard sample.sheet for human and mouse
@@ -19,19 +19,19 @@
 # }
 
 ##Human
-# prewd="C:/afile/jtan/Mammalian2019Promoter/CM2019RNAseqHuman"
-# gtf.file = "/data/bio/tan/Ensembl/genes.gtf"
+# prewd="/data/jtan/Mammalian2020Promoter/CM2019RNAseqHuman"
+# gtf.file = "/data/bio/jtan/Ensembl/genes.gtf"
 # species <- 'Homo_sapiens'
 
 ##Mouse
 
-prewd="C:/afile/jtan/Mammalian2019Promoter/CM2019RNAseqMouse"
-gtf.file = "/data/bio/tan//Ensembl/genes.gtf"
+prewd="/data/jtan/Mammalian2020Promoter/CM2019RNAseqMouse"
+gtf.file = "/data/jtan/Ensembl/genes.gtf"
 species <- 'Mus_musculus'
 
 
 sample.info = read.delim(file.path(prewd,"ProcessedData","PromoterObjects","sample.sheet.txt"),header=TRUE, row.names = 1, stringsAsFactors = FALSE)
-mc.cores= 4
+mc.cores= 10
 library(GenomicRanges)
 library(GenomicFeatures)
 library(ensembldb)
@@ -169,7 +169,7 @@ if(TRUE){
 ########################################################
 ##Human
 ##Exon annotation and count reads with DEXseq and featurecounts
-# cd /data/bio/tan/Mammalian2019Promoter/CM2019RNAseqHuman/ProcessedData
+# cd /data/jtan/Mammalian2020Promoter/CM2019RNAseqHuman/ProcessedData
 # module load HTSeq/0.7.2
 # qsub "python ~/scripts/dexseq_prepare_annotation2.py -f AnnotationObjects/protein_coding.DEXSeq.featurecount.gtf -r yes AnnotationObjects/protein_coding.gtf AnnotationObjects/protein_coding.DEXSeq.gff"
 # 
@@ -181,7 +181,7 @@ if(TRUE){
 
 ##Mouse
 ##Exon annotation and count reads with DEXseq and featurecounts
-# cd /data/bio/tan/Mammalian2019Promoter/CM2019RNAseqMouse/ProcessedData
+# cd /data/jtan/Mammalian2020Promoter/CM2019RNAseqMouse/ProcessedData
 # module load HTSeq/0.7.2
 # qsub "python ~/scripts/dexseq_prepare_annotation2.py -f AnnotationObjects/protein_coding.DEXSeq.featurecount.gtf -r yes AnnotationObjects/protein_coding.gtf AnnotationObjects/protein_coding.DEXSeq.gff"
 # 
