@@ -1073,3 +1073,7 @@ get.siggenes = function (tstep, rsq = 0.7, add.IDs = FALSE, IDs = NULL, matchID.
   names(output) <- c("sig.genes", "summary")
   output
 }
+
+
+
+
