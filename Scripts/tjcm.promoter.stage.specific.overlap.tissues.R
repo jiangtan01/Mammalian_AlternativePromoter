@@ -1,8 +1,8 @@
 #qsub -t 30 "Rscript ~/scripts/tjcm.promoter.stage.specific.overlap.tissues.R"
-# prewd="C:/afile/jtan/Mammalian2019Promoter/CM2019RNAseqHuman"
+# prewd="/data/jtan/Mammalian2020Promoter/CM2019RNAseqHuman"
 # stage.order = c("b4week","b5week","b6week","b7week","b8week","b9week","b10week","b11week","b12week","b13week","b16week","b18week",
 #                 "b19week","b20week","p0month","p6month","p2year","p5year","p15year","p25year","p35year","p45year","p55year")
-prewd="C:/afile/jtan/Mammalian2019Promoter/CM2019RNAseqMouse"
+prewd="/data/jtan/Mammalian2020Promoter/CM2019RNAseqMouse"
 stage.order = c("E10.5", "E11.5", "E12.5", "E13.5", "E14.5", "E15.5", "E16.5", "E17.5", "E18.5", "P0", "P03", "P14", "P28", "P63")
 
 sample.info = read.delim(file.path(prewd,"ProcessedData","PromoterObjects","sample.sheet.txt"),header=TRUE, row.names = 1, stringsAsFactors = FALSE)
