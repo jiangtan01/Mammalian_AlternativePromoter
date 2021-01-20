@@ -4,12 +4,12 @@ module load WiggleTools/1.2.2
 
 ## mean of replicates, mean of KOs
 ## mean of reps
-upperdir=/data/bio/tan/Mammalian2019Promoter #$1
+upperdir=/data/jtan/Mammalian2020Promoter #$1
 # dir=CM2019RNAseqHuman #$2
-# chromsize=/data/bio/tan/genome_fasta/genome.chrom.sizes
+# chromsize=/data/jtan/genome_fasta/genome.chrom.sizes
 
 dir=CM2019RNAseqMouse #$2
-chromsize=/data/bio/tan/genome_fasta/genome.chrom.sizes
+chromsize=/data/jtan/genome_fasta/genome.chrom.sizes
 
 cd $upperdir/$dir
 
