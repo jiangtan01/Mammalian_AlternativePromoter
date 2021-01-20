@@ -1,8 +1,8 @@
 #qsub -t 30 "Rscript ~/scripts/tjcm.promoter.tissue.specific.proactiv.R"
-# prewd="C:/afile/jtan/Mammalian2019Promoter/CM2019RNAseqHuman"
+# prewd="/data/jtan/Mammalian2020Promoter/CM2019RNAseqHuman"
 # stage.order = c("b4week","b5week","b6week","b7week","b8week","b9week","b10week","b11week","b12week","b13week","b16week","b18week",
 #                 "b19week","b20week","p0month","p6month","p2year","p5year","p15year","p25year","p35year","p45year","p55year")
-prewd="C:/afile/jtan/Mammalian2019Promoter/CM2019RNAseqMouse"
+prewd="/data/jtan/Mammalian2020Promoter/CM2019RNAseqMouse"
 stage.order = c("s10_Female","s10_Male","s11_Female","s11_Male","s12_Female","s12_Male","s13_Female","s13_Male","s14_Female","s14_Male",
                 "s15_Female","s15_Male","s16_Female","s16_Male","s17_Female","s17_Male","s18_Female","s18_Male","s0dpb_Female","s0dpb_Male",
                 "s3dpb_Female","s3dpb_Male","s2wpb_Female","s2wpb_Male","s4wpb_Female","s4wpb_Male","s9wpb_Female","s9wpb_Male")
