@@ -1,5 +1,5 @@
 ##module load snakePipes/1.2.3 && cd /data/jtan/Mammalian2020Promoter
-##RNA-seq -i ../Fastq/CM2019RNAseqHuman/ -o CM2019RNAseqHuman --aligner HISAT2 --trimmer trimgalore --trimmerOptions '-q 20 --fastqc --trim-n --clip_R1 6' --libraryType 2 -j 100 --DAG --bwBinSize 10 hg38
+##RNA-seq -i ../Fastq/CM2019RNAseqHuman/ -o CM2019RNAseqHuman --aligner STAR --trimmer trimgalore --trimmerOptions '-q 20 --fastqc --trim-n --clip_R1 6' --libraryType 2 -j 100 --DAG --bwBinSize 10 hg38
 # for i in */*.SJ.out.tab; do j=`echo $i |cut -d "/" -f2`; awk '($5 > 0 && $7 > 2)' $i > $j; done ##remove low quality junction counts
 # make standard sample.sheet for human and mouse
 # if(TRUE){
