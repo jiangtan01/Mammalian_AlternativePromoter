@@ -1,6 +1,6 @@
-# prewd="C:/afile/jtan/Mammalian2019Promoter/CM2019RNAseqHuman"
-prewd="C:/afile/jtan/Mammalian2019Promoter/CM2019RNAseqMouse"
-mc.cores= 4
+# prewd="/data/jtan/Mammalian2020Promoter/CM2019RNAseqHuman"
+prewd="/data/jtan/Mammalian2020Promoter/CM2019RNAseqMouse"
+mc.cores= 10
 sample.info = read.delim(file.path(prewd,"ProcessedData","PromoterObjects","sample.sheet.txt"),header=TRUE, row.names = 1, stringsAsFactors = FALSE)
 
 
